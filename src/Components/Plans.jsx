@@ -21,7 +21,7 @@ const Plans = () => {
 					<Tbreveal delay={.2}>
 					<div
 						className="relative h-full w-full overflow-hidden rounded-2xl border border-zinc-700 bg-gradient-to-br from-zinc-100/90 to-zinc-200/80 p-6"
-						style={{ filter: "blur(0px);" }}
+						style={{ 'filter': "blur(0px)" }}
 					>
 						<div className="flex flex-col items-center border-b border-zinc-700 pb-6">
 							<span className="mb-6 inline-block font-bold text-black">Starter Package</span>
@@ -77,7 +77,7 @@ const Plans = () => {
 					<Tbreveal delay={.4}>
 					<div
 						className="relative h-full w-full overflow-hidden rounded-2xl border border-zinc-700 bg-gradient-to-br from-zinc-100/50 to-zinc-700/60 p-6"
-						style={{ filter: "blur(0px);" }}
+						style={{ 'filter': "blur(0px)" }}
 					>
 						<div className="flex flex-col  items-center border-b border-zinc-700 pb-6">
 							<span className="mb-6 inline-block text-white">Growth Package</span>
@@ -134,7 +134,7 @@ const Plans = () => {
 						<Tbreveal delay={.6}>
 					<div
 						className="relative h-full w-full overflow-hidden rounded-2xl border border-zinc-700 bg-gradient-to-br from-zinc-100/10 to-zinc-900/80 p-6"
-						style={{ filter: "blur(0px);" }}
+						style={{ 'filter': "blur(0px)" }}
 					>
 						<div className="flex flex-col items-center border-b border-zinc-700 pb-6">
 							<span className="mb-6 inline-block text-zinc-50">Pro Package</span>

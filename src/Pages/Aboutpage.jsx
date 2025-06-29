@@ -3,7 +3,8 @@ import transition from '../transition'
 
 const Aboutpage = () => {
   return (
-    <div>Aboutpage</div>
+    <></>
+    // <div>Aboutpage</div>
   )
 }
 export default transition(Aboutpage)

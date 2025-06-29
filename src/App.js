@@ -9,6 +9,7 @@ import Contact from "./Components/Q&A";
 import Aboutpage from "./Pages/Aboutpage";
 import Contactpage from "./Pages/Contactpage";
 import SHome from "./Pages/SHome";
+import NotFound from "./Pages/NotFound";
 function App() {
   const location = useLocation()
   const cursorX = useMotionValue(-100);
@@ -71,21 +72,22 @@ function App() {
         <Route path="/about" element={<Aboutpage />} />
         <Route path="/details" element={<About />} />
         <Route path="/Contact" element={<Contactpage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
     <footer className="bg-gradient-to-b from-[#01031a] to-gray-900 pt-20 pb-12 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-      <div class="space-y-6">
-                        <div class="flex items-center">
-                            <span class="text-2xl font-bold text-white ">MentorFlowX / Ecom Mentor</span>
+      <div className="space-y-6">
+                        <div className="flex items-center">
+                            <span className="text-2xl font-bold text-white ">MentorFlowX / Ecom Mentor</span>
                         </div>
-                        <p class="text-gray-400">
+                        <p className="text-gray-400">
                             The #1 mentorship program for building, scaling, and automating a profitable online business.
                         </p>
 
-                <div class="border-t border-gray-800 pt-8">
-                    <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <div className="border-t border-gray-800 pt-8">
+                    <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                         <p className='text-gray-400'>© 2025 MentorFlowX – All Rights Reserved</p>
                     </div>
                 </div>

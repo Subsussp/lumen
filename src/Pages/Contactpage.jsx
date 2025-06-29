@@ -8,7 +8,7 @@ const Contactpage = () => {
     <section style={{
         backgroundImage: `url("https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-108740.jpg")`,
       }} className='bg-no-repeat bg-cover bg-center w-screen h-screen'> 
-    <img src='/logo.jpg' className='w-[86.4px] h-[86.4px] scale-[1.3] bg-no-repeat bg-cover bg-center absolute top-[17%] left-[50%] translate-x-[-50%] rounded-[10.8px] shadow-lg' alt='bg'/>
+    <img src='logo.jpg' className='w-[86.4px] h-[86.4px] scale-[1.3] bg-no-repeat bg-cover bg-center absolute top-[17%] left-[50%] translate-x-[-50%] rounded-[10.8px] shadow-lg' alt='bg'/>
     <div>
       <div className='absolute top-[35%] flex flex-col px-[14.4px] w-full left-[50%] translate-x-[-50%]'>
       <h2 className='text-4xl sm:text-5xl text-white text-center font-Second '>Connect with me Right now</h2>
@@ -29,8 +29,8 @@ const Contactpage = () => {
                   </a> 
                   <h1 onClick={()=> setClicked(!clicked)} rel="noopener noreferrer" className='relative rounded-[14.4px] p-[28.8px] bg-white/10 flex justify-center transform transition-all cursor-pointer	hover:shadow-white/40 hover:shadow-xl transition-shadow duration-300'>
                     <MdEmail size={36} className={`nos transform transition-all duration-200 z-50 scale-[1.2] ${clicked && 'md:ml-[-72%] ml-[-92%]'}`}/>
-                    <h2 className={`text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-Second text-xl transform transition-all text-white duration-400 opacity-0 nos ${clicked && 'opacity-100'} `}>anonyms@gmail.com</h2>
                   </h1> 
+                    <h2 className={`text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-Second text-xl transform transition-all text-white duration-400 opacity-0 nos ${clicked && 'opacity-100'} `}>anonyms@gmail.com</h2>
       </div>
       
 </div>

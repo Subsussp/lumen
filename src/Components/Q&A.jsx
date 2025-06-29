@@ -23,16 +23,17 @@ const Qa = () => {
           {/* <div className='flex '> */}
   <ul className='flex flex-col justify-center px-4 gap-4 md:w-3/4 text-white font-Second'>
     {QandAlist[Catg].map((value,index)=>{
-      return <div onClick={()=> index == showA ? setshowA(null) : setshowA(index)} className='bg-gray-800/50  rounded-xl overflow-hidden transition-all duration-300 '>
-      <li className='p-6 cursor-pointer flex justify-between items-center '>
-    <h1 className='text-base md:text-xl'>
-      {value.Q}
-      </h1> 
-    <ArrowDown className='w-5 h-5 items-center justify-self-end'/>
-    </li>
- <div className={`row-span-2 px-6 text-sm text-zinc-400 md:text-base pb-4 ${showA !== index && 'hidden'}`}>{value.A}</div>    
-    
-    </div>
+      return <div key={index} onClick={() => (index == showA ? setshowA(null) : setshowA(index))} className="bg-gray-800/50  rounded-xl overflow-hidden transition-all duration-300 ">
+					<li key={index} className="p-6 cursor-pointer flex justify-between items-center ">
+						<h1 className="text-base md:text-xl">
+							{value.Q}
+						</h1>
+						<ArrowDown className="w-5 h-5 items-center justify-self-end" />
+					</li>
+					<div className={`row-span-2 px-6 text-sm text-zinc-400 md:text-base pb-4 ${showA !== index && "hidden"}`}>
+						{value.A}
+					</div>
+				</div>;
     })}
   </ul>
           {/* </div> */}
