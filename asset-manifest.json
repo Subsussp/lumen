@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/lumen/static/css/main.5f84b957.css",
+    "main.js": "/lumen/static/js/main.dd5212d5.js",
+    "static/js/773.4339b16d.chunk.js": "/lumen/static/js/773.4339b16d.chunk.js",
+    "static/js/453.a3c1d153.chunk.js": "/lumen/static/js/453.a3c1d153.chunk.js",
+    "index.html": "/lumen/index.html",
+    "main.5f84b957.css.map": "/lumen/static/css/main.5f84b957.css.map",
+    "main.dd5212d5.js.map": "/lumen/static/js/main.dd5212d5.js.map",
+    "773.4339b16d.chunk.js.map": "/lumen/static/js/773.4339b16d.chunk.js.map",
+    "453.a3c1d153.chunk.js.map": "/lumen/static/js/453.a3c1d153.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5f84b957.css",
+    "static/js/main.dd5212d5.js"
+  ]
+}
