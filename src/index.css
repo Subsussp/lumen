@@ -1,13 +1,253 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Parkinsans:wght@300..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+
+@import url('https://fonts.cdnfonts.com/css/twentieth-century-condensed');
+@import url('https://fonts.cdnfonts.com/css/fragment-core');
+@import url('https://fonts.cdnfonts.com/css/trajanusbricks');
+@import url('https://fonts.cdnfonts.com/css/sports-world');
+@import url('https://fonts.cdnfonts.com/css/classy-vogue');
+@import url('https://fonts.cdnfonts.com/css/vogue');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,300&display=swap');
+:root{
+    --mainele: #000;
+    --secondary: #1d2699;
+    --Main-font: 'Classy Vogue', sans-serif;
+    /* --Main-font: 'Classy Vogue', sans-serif; */
+    --Backgroud-font: 'Sports World', sans-serif;
+    /* --Second-font: 'Times New Roman', Times, serif; */
+    --Second-font: 'Poppins', serif;
+  }
+  /* Scrollbar width */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Scrollbar track (the background) */
+::-webkit-scrollbar-track {
+  background: #f7f6f6; /* dark background */
+}
+::-webkit-scrollbar-thumb {
+  background-color: #818181; /* color of scroll */
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+  img {
+    pointer-events: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+  }
+  
+  .fade-bottom {
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1),transparent);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+  body {
+    margin: 0;
+  }
+html ,body{
+  overflow-x: hidden;
+  width: 100%;
+  /* height: 100%; */
+}
+.frag{
+  width: 100%;
+  /* height: 100vh; */
+  background: #01031a;
+  font-family: var(--Second-font);
+}
+.par{
+  font-weight: 300;
+  font-family: var(--Second-font);
+  color: #a8a8a8;
+}
+.cursor {
+ backdrop-filter: blur(5px) saturate(180%);
+  background-color: transparent;
+  border: #a8a8a8 2px solid;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 200;
+}
+.hero::before {
+  content: '';
+  /* position: absolute; */
+  /* inset: 0; shorthand for top/right/bottom/left: 0 */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent); /* top dark to clear */
+  z-index: 1;
+  animation: floatUpDown 4.5s ease-in-out infinite;
+
+}
+.nav{
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(20px) saturate(180%);
+  /* background: rgba(0, 0, 0, 0.3); */
+  background: rgba(50, 50, 50, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+.NN-main-header{
+      display: flex;
+      flex-flow: row ;
+      align-items: center;
+      inline-size: 100%; 
+      justify-content: space-between;
+      z-index: 50;
+      border-bottom: var(--one) 1px solid ;
+  }
+  .back{
+   background: linear-gradient(to bottom, var(--secondary), #000); /* white to black */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;    
+  font-family: var(--Backgroud-font)
+
+}
+
+.maincontent{
+  /* line-height:60; */
+  font-family: var(--Second-font);
+  font-weight: 600;
+  margin-top: -72px;
+  padding: clamp(19px,4vw,9px) 0px;
+}
+.ovr{
+  /* margin-bottom: 8px; */
+  /* line-height: normal; */
+  /* font-size: clamp(25px,6vw,63px); */
+}
+.ov{
+  /* font-size: 49.5px; */
+  font-size: clamp(40px,4vw,49.5px);
+  font-weight: 500;
+}
+.slide-in{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: bottom;
+  z-index: 100;
+}
+.slide-out{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: top;
+  z-index: 100;
+}
+.smaincontent{
+  font-family: var(--Main-font);
+  font-size: 34.2px;
+}
+  .LSide{  
+    color: white;
+    font-family: var(--Main-font);
+    font-size: clamp(18px, 1.8vw, 36px);
+  }
+  .RSide{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 360px;
+    justify-content: space-evenly;
+    color: white;
+    margin-right: -30px;
+  }
+  .subnav{
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 0px; */
+  }
+  .sub{
+    padding: 4.5px 18px;
+  font-size: 18px;
+    font-family: var(--Second-font);
+    font-weight: 300;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+  .exe{
+    text-align: center;
+    font-family: var(--Second-font);
+    font-weight: 300;
+    font-size: 18px;
+    transition: all 400 ease-in-out;
+    border-bottom: 2px solid rgba(255, 255, 255, 0);
+    
+    /* margin-right: -0px; */
+  }
+  .exe:hover{
+    border-bottom: 2px solid white;
+  }
+  .btncon{
+    position: absolute;
+    display: flex;
+    flex-direction: row ;
+    z-index: 30;
+    top: 118%;
+    justify-content: space-around;
+  }
+  .bt{
+    /* color: black; */
+    /* background-color: white; */
+    /* padding: 5px 10px; */
+      font-family: var(--Second-font);
+    }
+
+
+  .sub:hover{
+    color: rgb(19, 77, 202);
+  }
+
+.nos{
+  user-select: none;
+}
+
+@keyframes floatUpDown {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.typing-text {
+  /* font-family: monospace; */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid transparent;
+}
+
+.bcursor {
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
